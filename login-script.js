@@ -45,119 +45,126 @@ const invitados = {
     cantidad: 1,
     nombres: ["Usuario Test"],
   },
-};
+}
 
 class LoginManager {
   constructor() {
-    this.loginForm = null;
-    this.errorMessage = null;
-    this.codigoInput = null;
-    this.submitButton = null;
-    this.isSubmitting = false;
-    
-    this.init();
+    this.loginForm = null
+    this.errorMessage = null
+    this.codigoInput = null
+    this.submitButton = null
+    this.isSubmitting = false
+
+    this.init()
   }
 
   init() {
     document.addEventListener("DOMContentLoaded", () => {
-      this.initializeElements();
-      this.checkExistingLogin();
-      this.setupEventListeners();
-    });
+      this.initializeElements()
+      this.checkExistingLogin()
+      this.setupEventListeners()
+    })
   }
 
   initializeElements() {
-    this.loginForm = document.getElementById("loginForm");
-    this.errorMessage = document.getElementById("error-message");
-    this.codigoInput = document.getElementById("codigo");
-    this.submitButton = this.loginForm?.querySelector('button[type="submit"]');
+    this.loginForm = document.getElementById("loginForm")
+    this.errorMessage = document.getElementById("error-message")
+    this.codigoInput = document.getElementById("codigo")
+    this.submitButton = this.loginForm?.querySelector('button[type="submit"]')
 
     if (!this.loginForm || !this.errorMessage || !this.codigoInput || !this.submitButton) {
-      console.error("Required elements not found");
-      return;
+      console.error("Required elements not found")
+      return
     }
   }
 
   checkExistingLogin() {
     try {
-      const usuarioLogueado = localStorage.getItem("invitado_logueado");
+      const usuarioLogueado = localStorage.getItem("invitado_logueado")
       if (usuarioLogueado) {
-        const userData = JSON.parse(usuarioLogueado);
+        const userData = JSON.parse(usuarioLogueado)
         // Validate stored data
         if (userData.codigo && userData.nombre) {
-          this.redirectToMain();
+          this.redirectToMain()
         } else {
           // Clear invalid data
-          localStorage.removeItem("invitado_logueado");
+          localStorage.removeItem("invitado_logueado")
         }
       }
     } catch (error) {
-      console.error("Error checking existing login:", error);
-      localStorage.removeItem("invitado_logueado");
+      console.error("Error checking existing login:", error)
+      localStorage.removeItem("invitado_logueado")
     }
   }
 
   setupEventListeners() {
-    if (!this.loginForm) return;
+    if (!this.loginForm) return
 
-    this.loginForm.addEventListener("submit", (e) => this.handleSubmit(e));
-    this.codigoInput.addEventListener("input", () => this.clearError());
-    this.codigoInput.addEventListener("keydown", (e) => this.handleKeyDown(e));
-    
+    this.loginForm.addEventListener("submit", (e) => this.handleSubmit(e))
+    this.codigoInput.addEventListener("input", () => this.clearError())
+    this.codigoInput.addEventListener("keydown", (e) => this.handleKeyDown(e))
+
     // Focus management
-    this.codigoInput.focus();
+    this.codigoInput.focus()
   }
 
   handleKeyDown(e) {
     // Allow only alphanumeric characters and navigation keys
     const allowedKeys = [
-      'Backspace', 'Delete', 'Tab', 'Escape', 'Enter',
-      'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'
-    ];
-    
+      "Backspace",
+      "Delete",
+      "Tab",
+      "Escape",
+      "Enter",
+      "ArrowLeft",
+      "ArrowRight",
+      "ArrowUp",
+      "ArrowDown",
+    ]
+
     if (!allowedKeys.includes(e.key) && !e.key.match(/^[a-zA-Z0-9]$/)) {
-      e.preventDefault();
+      e.preventDefault()
     }
   }
 
   async handleSubmit(e) {
-    e.preventDefault();
-    
-    if (this.isSubmitting) return;
-    
-    const codigo = this.codigoInput.value.trim().toUpperCase();
-    
+    e.preventDefault()
+
+    if (this.isSubmitting) return
+
+    const codigo = this.codigoInput.value.trim().toUpperCase()
+
     if (!codigo) {
-      this.showError("Por favor, ingresá tu código de invitación.");
-      return;
+      this.showError("Por favor, ingresá tu código de invitación.")
+      return
     }
 
     if (codigo.length < 3) {
-      this.showError("El código debe tener al menos 3 caracteres.");
-      return;
+      this.showError("El código debe tener al menos 3 caracteres.")
+      return
     }
 
-    this.isSubmitting = true;
-    this.setLoadingState(true);
-    
+    this.isSubmitting = true
+    this.setLoadingState(true)
+
     try {
-      await this.verifyCode(codigo);
+      await this.verifyCode(codigo)
     } catch (error) {
-      console.error("Login error:", error);
-      this.showError("Ocurrió un error. Por favor, intentá nuevamente.");
+      console.error("Login error:", error)
+      this.showError("Ocurrió un error. Por favor, intentá nuevamente.")
     } finally {
-      this.isSubmitting = false;
+      this.isSubmitting = false
     }
   }
 
   async verifyCode(codigo) {
     // Simulate API delay for better UX
-    await new Promise(resolve => setTimeout(resolve, 1200));
-    
+    await new Promise((resolve) => setTimeout(resolve, 1200))
+
     if (invitados[codigo]) {
-      await this.handleSuccessfulLogin(codigo);
+      await this.handleSuccessfulLogin(codigo)
     } else {
-      this.handleFailedLogin();
+      this.handleFailedLogin()
     }
   }
 
@@ -166,96 +173,95 @@ class LoginManager {
       codigo: codigo,
       ...invitados[codigo],
       fechaLogin: new Date().toISOString(),
-      sessionId: this.generateSessionId()
-    };
+      sessionId: this.generateSessionId(),
+    }
 
     try {
-      localStorage.setItem("invitado_logueado", JSON.stringify(datosInvitado));
-      
-      this.setSuccessState();
-      
+      localStorage.setItem("invitado_logueado", JSON.stringify(datosInvitado))
+
+      this.setSuccessState()
+
       // Redirect after showing success message
       setTimeout(() => {
-        this.redirectToMain();
-      }, 1500);
-      
+        this.redirectToMain()
+      }, 1500)
     } catch (error) {
-      console.error("Error saving login data:", error);
-      this.showError("Error al guardar los datos. Por favor, intentá nuevamente.");
-      this.setLoadingState(false);
+      console.error("Error saving login data:", error)
+      this.showError("Error al guardar los datos. Por favor, intentá nuevamente.")
+      this.setLoadingState(false)
     }
   }
 
   handleFailedLogin() {
-    this.showError("Código incorrecto. Por favor, verificá tu invitación.");
-    this.setLoadingState(false);
-    this.codigoInput.value = "";
-    this.codigoInput.focus();
-    
+    this.showError("Código incorrecto. Por favor, verificá tu invitación.")
+    this.setLoadingState(false)
+    this.codigoInput.value = ""
+    this.codigoInput.focus()
+
     // Auto-hide error after 5 seconds
     setTimeout(() => {
-      this.clearError();
-    }, 5000);
+      this.clearError()
+    }, 5000)
   }
 
   setLoadingState(isLoading) {
-    if (!this.submitButton) return;
-    
-    this.submitButton.disabled = isLoading;
-    
+    if (!this.submitButton) return
+
+    this.submitButton.disabled = isLoading
+
     if (isLoading) {
-      this.submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Verificando...';
+      this.submitButton.innerHTML = '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Verificando...'
     } else {
-      this.submitButton.innerHTML = '<i class="fas fa-key" aria-hidden="true"></i> Ingresar';
+      this.submitButton.innerHTML = '<i class="fas fa-key" aria-hidden="true"></i> Ingresar'
     }
   }
 
   setSuccessState() {
-    if (!this.submitButton) return;
-    
-    this.submitButton.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i> ¡Bienvenido!';
-    this.submitButton.style.backgroundColor = "#10b981";
-    this.clearError();
+    if (!this.submitButton) return
+
+    this.submitButton.innerHTML = '<i class="fas fa-check" aria-hidden="true"></i> ¡Bienvenido!'
+    this.submitButton.style.backgroundColor = "#10b981"
+    this.clearError()
   }
 
   showError(message) {
-    if (!this.errorMessage) return;
-    
-    this.errorMessage.querySelector('span').textContent = message;
-    this.errorMessage.style.display = "flex";
-    this.errorMessage.setAttribute('aria-hidden', 'false');
-    
+    if (!this.errorMessage) return
+
+    this.errorMessage.querySelector("span").textContent = message
+    this.errorMessage.style.display = "flex"
+    this.errorMessage.setAttribute("aria-hidden", "false")
+
     // Announce error to screen readers
-    this.announceToScreenReader(message);
+    this.announceToScreenReader(message)
   }
 
   clearError() {
-    if (!this.errorMessage) return;
-    
-    this.errorMessage.style.display = "none";
-    this.errorMessage.setAttribute('aria-hidden', 'true');
+    if (!this.errorMessage) return
+
+    this.errorMessage.style.display = "none"
+    this.errorMessage.setAttribute("aria-hidden", "true")
   }
 
   announceToScreenReader(message) {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
+    const announcement = document.createElement("div")
+    announcement.setAttribute("aria-live", "polite")
+    announcement.setAttribute("aria-atomic", "true")
+    announcement.className = "sr-only"
+    announcement.textContent = message
+
+    document.body.appendChild(announcement)
+
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+      document.body.removeChild(announcement)
+    }, 1000)
   }
 
   generateSessionId() {
-    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+    return Date.now().toString(36) + Math.random().toString(36).substr(2)
   }
 
   redirectToMain() {
-    window.location.href = "index.html";
+    window.location.href = "index.html"
   }
 }
 
@@ -272,25 +278,26 @@ const srOnlyStyles = `
     white-space: nowrap;
     border: 0;
   }
-`;
+`
 
 // Add sr-only styles to document
-const styleSheet = document.createElement('style');
-styleSheet.textContent = srOnlyStyles;
-document.head.appendChild(styleSheet);
+const styleSheet = document.createElement("style")
+styleSheet.textContent = srOnlyStyles
+document.head.appendChild(styleSheet)
 
 // Initialize login manager
-new LoginManager();
+new LoginManager()
 
 // Service Worker registration for offline support (optional)
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('SW registered: ', registration);
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        console.log("SW registered: ", registration)
       })
-      .catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  });
+      .catch((registrationError) => {
+        console.log("SW registration failed: ", registrationError)
+      })
+  })
 }

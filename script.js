@@ -128,19 +128,19 @@ class WeddingSiteManager {
   formatCountdown({ days, hours, minutes, seconds }) {
     return `
       <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <div style="background: rgba(150, 142, 134, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
+        <div style="background: rgba(74, 74, 74, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
           <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-oscuro);">${days}</div>
           <div style="font-size: 0.7rem; opacity: 0.7;">días</div>
         </div>
-        <div style="background: rgba(150, 142, 134, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
+        <div style="background: rgba(74, 74, 74, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
           <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-oscuro);">${hours}</div>
           <div style="font-size: 0.7rem; opacity: 0.7;">horas</div>
         </div>
-        <div style="background: rgba(150, 142, 134, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
+        <div style="background: rgba(74, 74, 74, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
           <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-oscuro);">${minutes}</div>
           <div style="font-size: 0.7rem; opacity: 0.7;">min</div>
         </div>
-        <div style="background: rgba(150, 142, 134, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
+        <div style="background: rgba(74, 74, 74, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
           <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-oscuro);">${seconds}</div>
           <div style="font-size: 0.7rem; opacity: 0.7;">seg</div>
         </div>

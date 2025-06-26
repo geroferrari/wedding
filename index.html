@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <!-- Barra de usuario logueado -->
+  <!-- Barra de usuario logueado -->
   <div id="user-bar" class="user-bar">
     <div class="user-info">
       <i class="fas fa-users"></i>
@@ -23,6 +23,7 @@
       <i class="fas fa-sign-out-alt"></i>
     </button>
   </div>
+  
   <header>
     <div class="header-contenido">
       <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Casamiento Geronimo y Guillermina">
@@ -53,6 +54,7 @@
     <section id="countdown" aria-labelledby="countdown-title">
       <h2 id="countdown-title">
         <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>
+        Cuenta Regresiva
       </h2>
       <p class="fecha-boda">¡Nos casamos el <strong>sábado 28 de Marzo de 2026 a las 18:00 hs</strong>!</p>
       <div id="timer" aria-live="polite"></div>
@@ -61,6 +63,7 @@
     <section id="fotos-section" aria-labelledby="fotos-title">
       <h2 id="fotos-title">
         <i class="fa fa-camera-retro" aria-hidden="true"></i>
+        Nuestros Momentos
       </h2>  
       <div class="carousel-container" role="region" aria-label="Carrusel de fotos de la pareja">
         <button class="carousel-btn prev" aria-label="Foto anterior" type="button">
@@ -114,6 +117,7 @@
 
     <section aria-labelledby="dresscode-title">
       <h2 id="dresscode-title">
+        <i class="fas fa-tshirt" aria-hidden="true"></i>
         Dress Code
       </h2>
       <div class="dress-code-tips">
@@ -136,55 +140,56 @@
       </div>
     </section>
 
-        <section id="lineup-section" aria-labelledby="lineup-title-section">
-  <h2 id="lineup-title-section">
-    <i class="fas fa-clock" aria-hidden="true"></i>
-    Line Up de la Noche
-  </h2>
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-time">18:00</div>
-      <div class="timeline-content">
-        <h4>Ceremonia</h4>
-        <p>¡Nos casamos! No llegues tarde 💍</p>
+    <section id="lineup-section" aria-labelledby="lineup-title-section">
+      <h2 id="lineup-title-section">
+        <i class="fas fa-clock" aria-hidden="true"></i>
+        Line Up de la Noche
+      </h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">18:00</div>
+          <div class="timeline-content">
+            <h4>Ceremonia</h4>
+            <p>¡Nos casamos! No llegues tarde 💍</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-content">
+            <h4>Cocktail</h4>
+            <p>Brindis y fotos con los novios 🥂</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">21:00</div>
+          <div class="timeline-content">
+            <h4>Cena</h4>
+            <p>Menú especial preparado con amor 🍽️</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">23:00</div>
+          <div class="timeline-content">
+            <h4>Fiesta</h4>
+            <p>¡A bailar hasta el amanecer! 💃🕺</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-time">19:00</div>
-      <div class="timeline-content">
-        <h4>Cocktail</h4>
-        <p>Brindis y fotos con los novios 🥂</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-time">21:00</div>
-      <div class="timeline-content">
-        <h4>Cena</h4>
-        <p>Menú especial preparado con amor 🍽️</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-time">23:00</div>
-      <div class="timeline-content">
-        <h4>Fiesta</h4>
-        <p>¡A bailar hasta el amanecer! 💃🕺</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <section aria-labelledby="musica-title">
       <h2 id="musica-title">
         <i class="fas fa-music" aria-hidden="true"></i>
+        Música
       </h2>
       <p>¿Qué música no puede faltar?</p>
-    </div>
+      <div class="music-section">
         <a href="https://open.spotify.com/playlist/6hEo3H1GaVymwYZYm72X1o?si=7d9ae97be02743b9&pt=a1f7e111c1d0a055507cf95637f83e80" target="_blank" rel="noopener" class="btn btn-spotify">
           <i class="fab fa-spotify" aria-hidden="true"></i>
-          Agregala nuestra Playlist
+          Agregá a nuestra Playlist
         </a>
       </div>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6hEo3H1GaVymwYZYm72X1o?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6hEo3H1GaVymwYZYm72X1o?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
 
     <section aria-labelledby="consejos-title">
@@ -204,32 +209,30 @@
       </div>
     </section>
 
-
-<section id="comparti-fotos-section" aria-labelledby="comparti-fotos-title">
-  <h2 id="comparti-fotos-title">
-    <i class="fas fa-camera" aria-hidden="true"></i>
-    Compartí tus Fotos
-  </h2>
-  <div class="photo-sharing">
-    <div class="sharing-option">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-      <div>
-        <h4>Instagram</h4>
-        <p>Etiquetanos en tus stories y posts</p>
-        <strong>@guille_gero_2026</strong>
+    <section id="comparti-fotos-section" aria-labelledby="comparti-fotos-title">
+      <h2 id="comparti-fotos-title">
+        <i class="fas fa-camera" aria-hidden="true"></i>
+        Compartí tus Fotos
+      </h2>
+      <div class="photo-sharing">
+        <div class="sharing-option">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <div>
+            <h4>Instagram</h4>
+            <p>Etiquetanos en tus stories y posts</p>
+            <strong>@guille_gero_2026</strong>
+          </div>
+        </div>
+        <div class="sharing-option">
+          <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+          <div>
+            <h4>Álbum compartido</h4>
+            <p>Subí tus fotos a nuestro álbum de Google Photos</p>
+            <a href="https://photos.app.goo.gl/TU_ALBUM_ID" target="_blank" class="btn btn-small">Subir fotos</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="sharing-option">
-      <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
-      <div>
-        <h4>Álbum compartido</h4>
-        <p>Subí tus fotos a nuestro álbum de Google Photos</p>
-        <a href="https://photos.app.goo.gl/TU_ALBUM_ID" target="_blank" class="btn btn-small">Subir fotos</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <section aria-labelledby="confirmacion-title">
       <h2 id="confirmacion-title">
@@ -245,7 +248,6 @@
         <p class="form-note">Te llevará a un formulario de Google donde podrás confirmar tu asistencia y darnos todos los detalles.</p>
       </div>
     </section>
-
 
     <section aria-labelledby="regalo-title">
       <h2 id="regalo-title">
@@ -290,174 +292,94 @@
       </div>
     </div>
   </div>
-<!-- Modales de consejos -->
-<!-- <div id="lineupModal" class="modal" role="dialog" aria-labelledby="lineup-title" aria-hidden="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="lineup-title">Line Up de la Noche</h3>
-      <button class="cerrar" onclick="cerrarModal('lineup')" aria-label="Cerrar line up" type="button">
-        <i class="fas fa-times" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-time">18:00</div>
-          <div class="timeline-content">
-            <h4>Ceremonia</h4>
-            <p>¡Nos casamos! No llegues tarde 💍</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">19:00</div>
-          <div class="timeline-content">
-            <h4>Cocktail</h4>
-            <p>Brindis y fotos con los novios 🥂</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">21:00</div>
-          <div class="timeline-content">
-            <h4>Cena</h4>
-            <p>Menú especial preparado con amor 🍽️</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">23:00</div>
-          <div class="timeline-content">
-            <h4>Fiesta</h4>
-            <p>¡A bailar hasta el amanecer! 💃🕺</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div id="fotosModal" class="modal" role="dialog" aria-labelledby="fotos-title" aria-hidden="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="fotos-title">Compartí tus Fotos</h3>
-      <button class="cerrar" onclick="cerrarModal('fotos')" aria-label="Cerrar fotos" type="button">
-        <i class="fas fa-times" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="photo-sharing">
-        <div class="sharing-option">
-          <i class="fab fa-instagram" aria-hidden="true"></i>
-          <div>
-            <h4>Instagram</h4>
-            <p>Etiquetanos en tus stories y posts</p>
-            <strong>@guille_gero_2026</strong>
+  <!-- Modales de consejos -->
+  <div id="transporteModal" class="modal" role="dialog" aria-labelledby="transporte-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="transporte-title">Transporte Recomendado</h3>
+        <button class="cerrar" onclick="cerrarModal('transporte')" aria-label="Cerrar transporte" type="button">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="transport-options">
+          <div class="transport-option">
+            <i class="fas fa-car" aria-hidden="true"></i>
+            <div>
+              <h4>Remis/Taxi</h4>
+              <p>La opción más cómoda para ir y volver sin preocupaciones</p>
+              <ul>
+                <li>No te preocupes por manejar</li>
+                <li>Podés tomar tranquilo</li>
+                <li>Viaje seguro de vuelta</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="sharing-option">
-          <i class="fas fa-hashtag" aria-hidden="true"></i>
-          <div>
-            <h4>Hashtag oficial</h4>
-            <p>Usá nuestro hashtag para que podamos ver todas las fotos</p>
-            <strong>#GuilleYGero2026</strong>
+          <div class="transport-option">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            <div>
+              <h4>Combi compartida</h4>
+              <p>Organizate con otros invitados para compartir el viaje</p>
+              <ul>
+                <li>Más económico</li>
+                <li>Divertido ir con amigos</li>
+                <li>Coordinamos horarios</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="sharing-option">
-          <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
-          <div>
-            <h4>Álbum compartido</h4>
-            <p>Subí tus fotos a nuestro álbum de Google Photos</p>
-            <a href="https://photos.app.goo.gl/TU_ALBUM_ID" target="_blank" class="btn btn-small">Subir fotos</a>
+          <div class="transport-warning">
+            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+            <p><strong>Importante:</strong> Si venís en auto, recordá designar un conductor responsable. ¡Queremos que llegues seguro a casa!</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
 
-<div id="transporteModal" class="modal" role="dialog" aria-labelledby="transporte-title" aria-hidden="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="transporte-title">Transporte Recomendado</h3>
-      <button class="cerrar" onclick="cerrarModal('transporte')" aria-label="Cerrar transporte" type="button">
-        <i class="fas fa-times" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="transport-options">
-        <div class="transport-option">
-          <i class="fas fa-car" aria-hidden="true"></i>
-          <div>
-            <h4>Remis/Taxi</h4>
-            <p>La opción más cómoda para ir y volver sin preocupaciones</p>
-            <ul>
-              <li>No te preocupes por manejar</li>
-              <li>Podés tomar tranquilo</li>
-              <li>Viaje seguro de vuelta</li>
-            </ul>
+  <div id="alojamientoModal" class="modal" role="dialog" aria-labelledby="alojamiento-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="alojamiento-title">Alojamiento Cerca</h3>
+        <button class="cerrar" onclick="cerrarModal('alojamiento')" aria-label="Cerrar alojamiento" type="button">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="accommodation-options">
+          <div class="accommodation-item">
+            <h4>Hotel Campana</h4>
+            <div class="hotel-info">
+              <p><i class="fas fa-map-marker-alt"></i> A 15 minutos de la finca</p>
+              <p><i class="fas fa-star"></i> 4 estrellas</p>
+              <p><i class="fas fa-phone"></i> (03489) 123-456</p>
+            </div>
           </div>
-        </div>
-        <div class="transport-option">
-          <i class="fas fa-users" aria-hidden="true"></i>
-          <div>
-            <h4>Combi compartida</h4>
-            <p>Organizate con otros invitados para compartir el viaje</p>
-            <ul>
-              <li>Más económico</li>
-              <li>Divertido ir con amigos</li>
-              <li>Coordinamos horarios</li>
-            </ul>
+          <div class="accommodation-item">
+            <h4>Apart Hotel Zárate</h4>
+            <div class="hotel-info">
+              <p><i class="fas fa-map-marker-alt"></i> A 20 minutos de la finca</p>
+              <p><i class="fas fa-star"></i> 3 estrellas</p>
+              <p><i class="fas fa-phone"></i> (03487) 654-321</p>
+            </div>
           </div>
-        </div>
-        <div class="transport-warning">
-          <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
-          <p><strong>Importante:</strong> Si venís en auto, recordá designar un conductor responsable. ¡Queremos que llegues seguro a casa!</p>
+          <div class="accommodation-item">
+            <h4>Cabañas del Río</h4>
+            <div class="hotel-info">
+              <p><i class="fas fa-map-marker-alt"></i> A 25 minutos de la finca</p>
+              <p><i class="fas fa-tree"></i> Ambiente natural</p>
+              <p><i class="fas fa-phone"></i> (03489) 987-654</p>
+            </div>
+          </div>
+          <div class="accommodation-tip">
+            <i class="fas fa-lightbulb"></i>
+            <p><strong>Tip:</strong> Reservá con anticipación, especialmente si venís en fin de semana. ¡Podés coordinar con otros invitados para compartir!</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="alojamientoModal" class="modal" role="dialog" aria-labelledby="alojamiento-title" aria-hidden="true">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h3 id="alojamiento-title">Alojamiento Cerca</h3>
-      <button class="cerrar" onclick="cerrarModal('alojamiento')" aria-label="Cerrar alojamiento" type="button">
-        <i class="fas fa-times" aria-hidden="true"></i>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="accommodation-options">
-        <div class="accommodation-item">
-          <h4>Hotel Campana</h4>
-          <div class="hotel-info">
-            <p><i class="fas fa-map-marker-alt"></i> A 15 minutos de la finca</p>
-            <p><i class="fas fa-star"></i> 4 estrellas</p>
-            <p><i class="fas fa-phone"></i> (03489) 123-456</p>
-          </div>
-        </div>
-        <div class="accommodation-item">
-          <h4>Apart Hotel Zárate</h4>
-          <div class="hotel-info">
-            <p><i class="fas fa-map-marker-alt"></i> A 20 minutos de la finca</p>
-            <p><i class="fas fa-star"></i> 3 estrellas</p>
-            <p><i class="fas fa-phone"></i> (03487) 654-321</p>
-          </div>
-        </div>
-        <div class="accommodation-item">
-          <h4>Cabañas del Río</h4>
-          <div class="hotel-info">
-            <p><i class="fas fa-map-marker-alt"></i> A 25 minutos de la finca</p>
-            <p><i class="fas fa-tree"></i> Ambiente natural</p>
-            <p><i class="fas fa-phone"></i> (03489) 987-654</p>
-          </div>
-        </div>
-        <div class="accommodation-tip">
-          <i class="fas fa-lightbulb"></i>
-          <p><strong>Tip:</strong> Reservá con anticipación, especialmente si venís en fin de semana. ¡Podés coordinar con otros invitados para compartir!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
   <footer>
     <div class="footer-content">
       <p>Con mucho amor,</p>
