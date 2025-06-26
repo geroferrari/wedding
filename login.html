@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso - Casamiento Guille y Gero</title>
+  <meta name="description" content="Página de acceso para invitados al casamiento de Guillermina y Gerónimo - 28 de Marzo 2026">
+  <link rel="stylesheet" href="login-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="login-script.js" as="script">
+  
+  <!-- Security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+</head>
+<body>
+  <main class="login-container">
+    <div class="login-card">
+      <header class="login-header">
+        <svg width="80" height="80" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Casamiento Guillermina y Gerónimo">
+          <circle cx="60" cy="60" r="58" fill="#ede9e7" stroke="#968e86" stroke-width="3"/>
+          <text x="50%" y="55%" text-anchor="middle" font-family="Cardo, serif" font-size="48" fill="#968e86" font-weight="600" dy=".35em">G &amp; G</text>
+          <path d="M50 80 Q60 90 70 80" stroke="#968e86" stroke-width="2" fill="none" />
+        </svg>
+        <h1>Bienvenidos a nuestro casamiento</h1>
+        <p>Ingresá tu código de invitación para acceder</p>
+      </header>
+
+      <form id="loginForm" class="login-form" novalidate>
+        <div class="form-group">
+          <label for="codigo">Código de invitación</label>
+          <input 
+            type="text" 
+            id="codigo" 
+            name="codigo" 
+            placeholder="Ingresá tu código..." 
+            required 
+            autocomplete="off"
+            spellcheck="false"
+            maxlength="10"
+            aria-describedby="codigo-help"
+          >
+          <div id="codigo-help" class="sr-only">
+            Ingresá el código que recibiste en tu invitación
+          </div>
+        </div>
+        <button type="submit" class="btn-login" aria-describedby="login-status">
+          <i class="fas fa-key" aria-hidden="true"></i>
+          Ingresar
+        </button>
+      </form>
+
+      <div id="error-message" class="error-message" style="display: none;" role="alert" aria-live="polite">
+        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+        <span>Código incorrecto. Por favor, verificá tu invitación.</span>
+      </div>
+
+      <footer class="login-footer">
+        <p>¿No tenés tu código? Contactanos:</p>
+        <div class="contact-info">
+          <a href="tel:+5491234567890" class="contact-link" aria-label="Llamar por teléfono">
+            <i class="fas fa-phone" aria-hidden="true"></i>
+            <span>+54 9 123 456 7890</span>
+          </a>
+          <a href="mailto:guille.gero.2026@gmail.com" class="contact-link" aria-label="Enviar email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>guille.gero.2026@gmail.com</span>
+          </a>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="login-script.js"></script>
+</body>
+</html>
