@@ -2,16 +2,16 @@
 
 :root {
   --color-principal: #ede9e7;
-  --color-oscuro: #4a4a4a;
+  --color-oscuro: #968e86;
   --color-claro: #ffffff;
   --color-blanco: #ffffff;
   --color-negro: #2c2c2c;
-  --color-accent: #6b6b6b;
-  --color-secondary: #8a8a8a;
+  --color-accent: #938b81;
+  --color-secondary: #b8b0a8;
   --color-light-gray: #f5f3f1;
-  --shadow-light: 0 2px 8px rgba(74, 74, 74, 0.15);
-  --shadow-medium: 0 4px 12px rgba(74, 74, 74, 0.2);
-  --shadow-heavy: 0 8px 24px rgba(74, 74, 74, 0.25);
+  --shadow-light: 0 2px 8px rgba(150, 142, 134, 0.15);
+  --shadow-medium: 0 4px 12px rgba(150, 142, 134, 0.2);
+  --shadow-heavy: 0 8px 24px rgba(150, 142, 134, 0.25);
   --border-radius: 12px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -47,7 +47,7 @@ body {
   padding: 3rem 2.5rem;
   text-align: center;
   animation: fadeInUp 0.6s ease-out;
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
 }
 
 @keyframes fadeInUp {
@@ -121,7 +121,7 @@ input {
 input:focus {
   outline: none;
   border-color: var(--color-oscuro);
-  box-shadow: 0 0 0 3px rgba(74, 74, 74, 0.15);
+  box-shadow: 0 0 0 3px rgba(150, 142, 134, 0.15);
   background-color: #fefefe;
 }
 

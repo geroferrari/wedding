@@ -2,16 +2,16 @@
 
 :root {
   --color-principal: #ede9e7;
-  --color-oscuro: #4a4a4a;
+  --color-oscuro: #968e86;
   --color-claro: #ffffff;
   --color-blanco: #ffffff;
   --color-negro: #2c2c2c;
-  --color-accent: #6b6b6b;
-  --color-secondary: #8a8a8a;
+  --color-accent: #938b81;
+  --color-secondary: #b8b0a8;
   --color-light-gray: #f5f3f1;
-  --shadow-light: 0 2px 8px rgba(74, 74, 74, 0.15);
-  --shadow-medium: 0 4px 12px rgba(74, 74, 74, 0.2);
-  --shadow-heavy: 0 8px 24px rgba(74, 74, 74, 0.25);
+  --shadow-light: 0 2px 8px rgba(150, 142, 134, 0.15);
+  --shadow-medium: 0 4px 12px rgba(150, 142, 134, 0.2);
+  --shadow-heavy: 0 8px 24px rgba(150, 142, 134, 0.25);
   --border-radius: 12px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --max-width: 1200px;
@@ -183,7 +183,7 @@ section {
   box-shadow: var(--shadow-light);
   transition: var(--transition);
   animation: fadeInUp 0.6s ease-out;
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
   text-align: center;
 }
 
@@ -238,7 +238,7 @@ h2 i {
 #countdown {
   background: var(--color-blanco);
   text-align: center;
-  border: 1px solid rgba(74, 74, 74, 0.2);
+  border: 1px solid rgba(150, 142, 134, 0.2);
   padding: 2rem 1.5rem;
 }
 
@@ -260,7 +260,7 @@ h2 i {
   padding: 1.5rem;
   background: rgba(237, 233, 231, 0.3);
   border-radius: 8px;
-  border: 1px solid rgba(74, 74, 74, 0.2);
+  border: 1px solid rgba(150, 142, 134, 0.2);
 }
 
 /* Carousel */
@@ -311,7 +311,7 @@ h2 i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--color-oscuro);
+  background: rgba(150, 142, 134, 0.9);
   border: none;
   color: var(--color-blanco);
   font-size: 1.5rem;
@@ -327,7 +327,7 @@ h2 i {
 }
 
 .carousel-btn:hover {
-  background: var(--color-accent);
+  background: var(--color-oscuro);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -350,7 +350,7 @@ h2 i {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: rgba(74, 74, 74, 0.5);
+  background-color: rgba(150, 142, 134, 0.5);
   cursor: pointer;
   transition: var(--transition);
   border: none;
@@ -405,7 +405,7 @@ h2 i {
   background-color: var(--color-principal);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
 }
 
 .tip i {
@@ -431,7 +431,7 @@ h2 i {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   transition: var(--transition);
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
   cursor: pointer;
   font-family: inherit;
   text-align: center;
@@ -488,7 +488,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--color-oscuro);
-  box-shadow: 0 0 0 3px rgba(74, 74, 74, 0.15);
+  box-shadow: 0 0 0 3px rgba(150, 142, 134, 0.15);
 }
 
 /* Buttons */
@@ -583,7 +583,7 @@ textarea:focus {
   max-width: 600px;
   box-shadow: var(--shadow-heavy);
   animation: fadeInUp 0.3s ease-out;
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
 }
 
 .modal-header {
@@ -727,7 +727,7 @@ textarea:focus {
   padding: 1rem;
   background: var(--color-principal);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
   text-align: left;
 }
 
@@ -771,7 +771,7 @@ textarea:focus {
   padding: 1rem;
   background: var(--color-principal);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
   text-align: left;
 }
 
@@ -839,7 +839,7 @@ textarea:focus {
   padding: 1rem;
   background: var(--color-principal);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(74, 74, 74, 0.1);
+  border: 1px solid rgba(150, 142, 134, 0.1);
   text-align: center;
 }
 
