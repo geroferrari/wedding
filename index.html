@@ -12,18 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Barra de usuario logueado -->
-  <div id="user-bar" class="user-bar">
-    <div class="user-info">
-      <i class="fas fa-users"></i>
-      <span id="user-name">Cargando...</span>
-      <span id="user-count" class="user-count">0 invitados</span>
-    </div>
-    <button id="logout-btn" class="logout-btn" title="Cerrar sesión">
-      <i class="fas fa-sign-out-alt"></i>
-    </button>
-  </div>
-  
+
   <header>
     <div class="header-contenido">
       <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Casamiento Geronimo y Guillermina">
@@ -141,41 +130,61 @@
     </section>
 
     <section id="lineup-section" aria-labelledby="lineup-title-section">
-      <h2 id="lineup-title-section">
-        <i class="fas fa-clock" aria-hidden="true"></i>
-        Line Up de la Noche
-      </h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-time">18:00</div>
-          <div class="timeline-content">
-            <h4>Ceremonia</h4>
-            <p>¡Nos casamos! No llegues tarde 💍</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">19:00</div>
-          <div class="timeline-content">
-            <h4>Cocktail</h4>
-            <p>Brindis y fotos con los novios 🥂</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">21:00</div>
-          <div class="timeline-content">
-            <h4>Cena</h4>
-            <p>Menú especial preparado con amor 🍽️</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-time">23:00</div>
-          <div class="timeline-content">
-            <h4>Fiesta</h4>
-            <p>¡A bailar hasta el amanecer! 💃🕺</p>
-          </div>
-        </div>
+  <h2 id="lineup-title-section">
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    Itinerario
+  </h2>
+  <div class="timeline-container">
+    <!-- Línea vertical - oculta en móvil -->
+    <div class="timeline-line"></div>
+    
+    <!-- Eventos del timeline -->
+    <div class="timeline-event  timeline-left fade-in-left" data-index="0">
+      <div class="timeline-content">
+        <h3>Recepción de invitados</h3>
+        <p class="timeline-time">3:00 PM</p>
+        <p class="timeline-description">Llegada de los invitados y comienzo de nuestra celebración. Disfruta de música en vivo mientras esperamos el momento especial.</p>
       </div>
-    </section>
+      <div class="timeline-dot">
+        <div class="timeline-dot-inner"></div>
+      </div>
+    </div>
+
+    <div class="timeline-event timeline-right fade-in-right" data-index="1">
+      <div class="timeline-spacer"></div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-inner"></div>
+      </div>
+      <div class="timeline-content">
+        <h3>Ceremonia Civil</h3>
+        <p class="timeline-time">4:30 PM</p>
+        <p class="timeline-description">Momento en que intercambiamos votos y nos unimos en matrimonio civil ante el juez y nuestros seres más queridos.</p>
+      </div>
+    </div>
+
+    <div class="timeline-event  timeline-left fade-in-left" data-index="2">
+      <div class="timeline-content">
+        <h3>Cóctel y Fotos</h3>
+        <p class="timeline-time">5:00 PM</p>
+        <p class="timeline-description">Disfrutemos de bebidas y aperitivos mientras tomamos fotografías para recordar este día tan especial.</p>
+      </div>
+      <div class="timeline-dot">
+        <div class="timeline-dot-inner"></div>
+      </div>
+    </div>
+
+    <div class="timeline-event   timeline-right fade-in-right" data-index="3">
+      <div class="timeline-dot">
+        <div class="timeline-dot-inner"></div>
+      </div>
+      <div class="timeline-content">
+        <h3>Cena</h3>
+        <p class="timeline-time">6:00 PM</p>
+        <p class="timeline-description">Comienza el servicio de alimentos. Disfruta de nuestra selección de platillos mientras la música en vivo ameniza la velada.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section aria-labelledby="musica-title">
       <h2 id="musica-title">

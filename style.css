@@ -651,66 +651,173 @@ textarea:focus {
   box-shadow: var(--shadow-light);
 }
 
+
 /* Timeline */
-.timeline {
+.timeline-container {
   position: relative;
-  padding-left: 2rem;
-  text-align: left;
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.timeline::before {
-  content: "";
+.timeline-line {
   position: absolute;
-  left: 1rem;
-  top: 0;
-  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
   width: 2px;
-  background: var(--color-oscuro);
+  background: #d4b8aa;
+  z-index: 1;
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 2rem;
+.timeline-event {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -1.5rem;
-  top: 0.5rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  border: 3px solid var(--color-blanco);
-  box-shadow: 0 0 0 3px var(--color-oscuro);
+.timeline-event.fade-in-left {
+  transform: translateX(-50px);
 }
 
-.timeline-time {
-  font-weight: bold;
-  color: var(--color-oscuro);
-  min-width: 60px;
-  font-size: 1.1rem;
-  text-align: center;
+.timeline-event.fade-in-right {
+  transform: translateX(50px);
 }
 
-.timeline-content h4 {
+.timeline-event.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Eventos del lado izquierdo */
+.timeline-left {
+  justify-content: flex-end;
+}
+
+.timeline-left .timeline-content {
+  text-align: right;
+  margin-right: 2rem;
+  max-width: 350px;
+}
+
+/* Eventos del lado derecho */
+.timeline-right {
+  justify-content: flex-start;
+}
+
+.timeline-right .timeline-content {
+  text-align: left;
+  margin-left: 2rem;
+  max-width: 350px;
+}
+
+.timeline-content {
+  padding: 1.5rem;
+  background: #f5efe9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(212, 184, 170, 0.2);
+  border: 1px solid rgba(212, 184, 170, 0.3);
+}
+
+.timeline-content h3 {
   margin: 0 0 0.5rem 0;
   color: var(--color-negro);
   font-family: "Cardo", serif;
-  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.timeline-content p {
+.timeline-time {
+  color: #d4b8aa;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.timeline-description {
   margin: 0;
   color: var(--color-negro);
   opacity: 0.8;
-  text-align: left;
+  line-height: 1.6;
+}
+
+.timeline-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f5efe9;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(212, 184, 170, 0.3);
+  z-index: 10;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.timeline-dot-inner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d4b8aa;
+}
+
+/* Mobile Timeline */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding-left: 2rem;
+  }
+
+  .timeline-line {
+    left: 1rem;
+    transform: none;
+  }
+
+  .timeline-event {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-event.fade-in-left,
+  .timeline-event.fade-in-right {
+    transform: translateY(30px);
+  }
+
+  .timeline-event.animate {
+    transform: translateY(0);
+  }
+
+  /* Reset desktop positioning for mobile */
+  .timeline-left,
+  .timeline-right {
+    justify-content: flex-start;
+  }
+
+  .timeline-left .timeline-content,
+  .timeline-right .timeline-content {
+    text-align: left;
+    margin: 1rem 0 0 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 32px;
+    height: 32px;
+  }
+
+  .timeline-dot-inner {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 /* Photo Sharing */
@@ -727,7 +834,7 @@ textarea:focus {
   padding: 1rem;
   background: var(--color-principal);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(150, 142, 134, 0.1);
+  border: 1px solid rgba(74, 74, 74, 0.1);
   text-align: left;
 }
 
@@ -771,7 +878,7 @@ textarea:focus {
   padding: 1rem;
   background: var(--color-principal);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(150, 142, 134, 0.1);
+  border: 1px solid rgba(74, 74, 74, 0.1);
   text-align: left;
 }
 
@@ -839,7 +946,7 @@ textarea:focus {
   padding: 1rem;
   background: var(--color-principal);
   border-radius: var(--border-radius);
-  border: 1px solid rgba(150, 142, 134, 0.1);
+  border: 1px solid rgba(74, 74, 74, 0.1);
   text-align: center;
 }
 

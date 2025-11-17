@@ -12,75 +12,12 @@ class WeddingSiteManager {
 
   init() {
     document.addEventListener("DOMContentLoaded", () => {
-      this.initializeAuth()
       this.initializeComponents()
       this.setupEventListeners()
       this.initializeAccessibility()
     })
   }
 
-  // Authentication Management
-  initializeAuth() {
-    try {
-      const usuarioLogueado = localStorage.getItem("invitado_logueado")
-      if (!usuarioLogueado) {
-        this.redirectToLogin()
-        return
-      }
-
-      this.currentUser = JSON.parse(usuarioLogueado)
-      this.validateUserData()
-      this.updateUserInterface()
-    } catch (error) {
-      console.error("Error initializing auth:", error)
-      this.clearAuthAndRedirect()
-    }
-  }
-
-  validateUserData() {
-    if (!this.currentUser?.codigo || !this.currentUser?.nombre) {
-      throw new Error("Invalid user data")
-    }
-  }
-
-  updateUserInterface() {
-    const userNameElement = document.getElementById("user-name")
-    const userCountElement = document.getElementById("user-count")
-
-    if (userNameElement) {
-      userNameElement.textContent = this.currentUser.nombre
-    }
-
-    if (userCountElement) {
-      const count = this.currentUser.cantidad || 1
-      userCountElement.textContent = `${count} invitado${count > 1 ? "s" : ""}`
-    }
-  }
-
-  setupLogout() {
-    const logoutBtn = document.getElementById("logout-btn")
-    if (logoutBtn) {
-      logoutBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        this.handleLogout()
-      })
-    }
-  }
-
-  handleLogout() {
-    if (confirm("¿Estás seguro que querés cerrar sesión?")) {
-      this.clearAuthAndRedirect()
-    }
-  }
-
-  clearAuthAndRedirect() {
-    localStorage.removeItem("invitado_logueado")
-    this.redirectToLogin()
-  }
-
-  redirectToLogin() {
-    window.location.href = "login.html"
-  }
 
   // Component Initialization
   initializeComponents() {
@@ -89,7 +26,7 @@ class WeddingSiteManager {
     this.initializeMusicPlayer()
     this.initializeModals()
     this.initializeLazyLoading()
-    this.setupLogout()
+    this.initializeTimeline()
   }
 
   // Enhanced Countdown
@@ -228,6 +165,11 @@ class WeddingSiteManager {
         imageObserver.observe(img)
       })
     }
+  }
+
+  // Timeline Animations
+  initializeTimeline() {
+    this.timelineAnimations = new TimelineAnimations()
   }
 
   // Accessibility
@@ -683,6 +625,61 @@ class Modal {
     }
 
     document.addEventListener("keydown", handleTabKey)
+  }
+}
+
+// Timeline Animations Class
+class TimelineAnimations {
+  constructor() {
+    this.timelineEvents = []
+    this.observer = null
+    this.init()
+  }
+
+  init() {
+    this.timelineEvents = document.querySelectorAll(".timeline-event")
+    if (this.timelineEvents.length === 0) return
+
+    this.setupIntersectionObserver()
+    this.observeElements()
+  }
+
+  setupIntersectionObserver() {
+    const options = {
+      threshold: 0.2, // Trigger when 20% of element is visible
+      rootMargin: "0px 0px -50px 0px", // Trigger slightly before element comes into view
+    }
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add a small delay based on the element's index for staggered animation
+          const index = Number.parseInt(entry.target.dataset.index) || 0
+          const delay = index * 200 // 200ms delay between each element
+
+          setTimeout(() => {
+            entry.target.classList.add("animate")
+          }, delay)
+
+          // Stop observing this element once it's animated
+          this.observer.unobserve(entry.target)
+        }
+      })
+    }, options)
+  }
+
+  observeElements() {
+    this.timelineEvents.forEach((event) => {
+      this.observer.observe(event)
+    })
+  }
+
+  // Method to reset animations (useful for testing)
+  resetAnimations() {
+    this.timelineEvents.forEach((event) => {
+      event.classList.remove("animate")
+      this.observer.observe(event)
+    })
   }
 }
 
