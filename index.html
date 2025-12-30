@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Casamiento Guille y Gero - 28 de Marzo 2026</title>
-  <meta name="description" content="Te invitamos a celebrar nuestro casamiento el 28 de Marzo de 2026 en Finca Don Mario">
+  <meta name="description"
+    content="Te invitamos a celebrar nuestro casamiento el 28 de Marzo de 2026 en Finca Don Mario">
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
-  <header>
-    <div class="header-contenido">
-      <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Casamiento Geronimo y Guillermina">
-        <circle cx="60" cy="60" r="58" fill="#f7e7ce" stroke="#e0c3a8" stroke-width="3"/>
-        <text x="50%" y="55%" text-anchor="middle" font-family="Dancing Script, cursive" font-size="48" fill="#e0c3a8" font-weight="600" dy=".35em">G &amp; G</text>
-        <path d="M50 80 Q60 90 70 80" stroke="#e0c3a8" stroke-width="2" fill="none" />
-      </svg>
-      <h1>Guille & Gero</h1>
+  <header class="header">
+    <div class="header-overlay">
+      <img src="assets/logo.png" alt="Logo Guille y Gero" class="header-logo">
     </div>
   </header>
-
   <audio id="bg-music" loop preload="metadata">
     <source src="assets/music.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Botón flotante de música -->
-  <button id="music-control" onclick="toggleMusic()" aria-label="Controlar música de fondo">
+  <button id="music-control" aria-label="Controlar música de fondo">
     <svg id="music-icon" class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="width: 1.5em; height: 1.5em;">
-      <polygon points="5,3 19,12 5,21"/>
+      <polygon points="5,3 19,12 5,21" />
     </svg>
-    <svg id="music-icon-pause" class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none; width: 1.5em; height: 1.5em;">
-      <rect x="6" y="4" width="4" height="16"/>
-      <rect x="14" y="4" width="4" height="16"/>
+    <svg id="music-icon-pause" class="pause-icon" viewBox="0 0 24 24" fill="currentColor"
+      style="display: none; width: 1.5em; height: 1.5em;">
+      <rect x="6" y="4" width="4" height="16" />
+      <rect x="14" y="4" width="4" height="16" />
     </svg>
   </button>
 
@@ -53,28 +53,53 @@
       <h2 id="fotos-title">
         <i class="fa fa-camera-retro" aria-hidden="true"></i>
         Nuestros Momentos
-      </h2>  
+      </h2>
       <div class="carousel-container" role="region" aria-label="Carrusel de fotos de la pareja">
         <button class="carousel-btn prev" aria-label="Foto anterior" type="button">
           <i class="fas fa-chevron-left" aria-hidden="true"></i>
         </button>
         <div class="carousel-track-container">
           <ul class="carousel-track" role="list">
-            <li class="carousel-slide" role="listitem"><img src="assets/1.jpeg" alt="Foto romántica de Guille y Gero" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/2.jpeg" alt="Momento especial de la pareja" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/3.jpeg" alt="Guille y Gero sonriendo" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/4.jpeg" alt="Foto casual de la pareja" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/6.jpeg" alt="Momento divertido juntos" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/7.jpeg" alt="Foto en la naturaleza" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/8.jpeg" alt="Guille y Gero abrazados" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/9.jpeg" alt="Momento íntimo de la pareja" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/10.jpeg" alt="Foto espontánea" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/11.jpeg" alt="Guille y Gero felices" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/12.jpeg" alt="Momento especial compartido" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/13.jpeg" alt="Foto romántica al atardecer" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/14.jpeg" alt="Guille y Gero riendo" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/15.jpeg" alt="Momento tierno de la pareja" loading="lazy" /></li>
-            <li class="carousel-slide" role="listitem"><img src="assets/16.jpeg" alt="Última foto del carrusel" loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/4.png" alt="Foto casual de la pareja"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/5.png" alt="Momento divertido juntos"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/6.png" alt="Momento divertido juntos"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/7.png" alt="Foto en la naturaleza"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/8.png" alt="Guille y Gero abrazados"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/9.png" alt="Momento íntimo de la pareja"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/10.png" alt="Foto espontánea" loading="lazy" />
+            </li>
+            <li class="carousel-slide" role="listitem"><img src="assets/11.png" alt="Guille y Gero felices"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/12.png" alt="Momento especial compartido"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/13.png" alt="Foto romántica al atardecer"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/14.png" alt="Guille y Gero riendo"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/15.png" alt="Momento tierno de la pareja"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/16.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/17.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/18.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/19.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/20.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/21.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/22.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
+            <li class="carousel-slide" role="listitem"><img src="assets/23.png" alt="Última foto del carrusel"
+                loading="lazy" /></li>
           </ul>
         </div>
         <button class="carousel-btn next" aria-label="Foto siguiente" type="button">
@@ -88,12 +113,13 @@
       <h2 id="lugar-title">
         <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
         Finca Don Mario
-      </h2>  
+      </h2>
       <div class="venue-photo">
         <img src="assets/finca-don-mario.jpg" alt="Vista de Finca Don Mario - Lugar del casamiento" loading="lazy">
       </div>
       <div class="map-buttons">
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Finca+Don+Mario,+Campana,+Buenos+Aires" target="_blank" rel="noopener" class="btn">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Finca+Don+Mario,+Campana,+Buenos+Aires"
+          target="_blank" rel="noopener" class="btn">
           <i class="fas fa-route" aria-hidden="true"></i>
           Cómo llegar
         </a>
@@ -130,75 +156,103 @@
     </section>
 
     <section id="lineup-section" aria-labelledby="lineup-title-section">
-  <h2 id="lineup-title-section">
-    <i class="fas fa-clock" aria-hidden="true"></i>
-    Itinerario
-  </h2>
-  <div class="timeline-container">
-    <!-- Línea vertical - oculta en móvil -->
-    <div class="timeline-line"></div>
-    
-    <!-- Eventos del timeline -->
-    <div class="timeline-event  timeline-left fade-in-left" data-index="0">
-      <div class="timeline-content">
-        <h3>Recepción de invitados</h3>
-        <p class="timeline-time">3:00 PM</p>
-        <p class="timeline-description">Llegada de los invitados y comienzo de nuestra celebración. Disfruta de música en vivo mientras esperamos el momento especial.</p>
-      </div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-inner"></div>
-      </div>
-    </div>
+      <h2 id="lineup-title-section">
+        <i class="fas fa-clock" aria-hidden="true"></i>
+        Itinerario
+      </h2>
 
-    <div class="timeline-event timeline-right fade-in-right" data-index="1">
-      <div class="timeline-spacer"></div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-inner"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Ceremonia Civil</h3>
-        <p class="timeline-time">4:30 PM</p>
-        <p class="timeline-description">Momento en que intercambiamos votos y nos unimos en matrimonio civil ante el juez y nuestros seres más queridos.</p>
-      </div>
-    </div>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        <div class="timeline-event timeline-right fade-in-right" data-index="0">
+          <div class="timeline-content">
+            <span class="timeline-time">18:00 hs</span>
+            <span class="timeline-title">Recepción de invitados 🥂</span>
+          </div>
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+        </div>
 
-    <div class="timeline-event  timeline-left fade-in-left" data-index="2">
-      <div class="timeline-content">
-        <h3>Cóctel y Fotos</h3>
-        <p class="timeline-time">5:00 PM</p>
-        <p class="timeline-description">Disfrutemos de bebidas y aperitivos mientras tomamos fotografías para recordar este día tan especial.</p>
-      </div>
-      <div class="timeline-dot">
-        <div class="timeline-dot-inner"></div>
-      </div>
-    </div>
+        <div class="timeline-event timeline-left fade-in-left" data-index="1">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">18:30 hs</span>
+            <span class="timeline-title">Ceremonia civil 💍</span>
+          </div>
+        </div>
 
-    <div class="timeline-event   timeline-right fade-in-right" data-index="3">
-      <div class="timeline-dot">
-        <div class="timeline-dot-inner"></div>
-      </div>
-      <div class="timeline-content">
-        <h3>Cena</h3>
-        <p class="timeline-time">6:00 PM</p>
-        <p class="timeline-description">Comienza el servicio de alimentos. Disfruta de nuestra selección de platillos mientras la música en vivo ameniza la velada.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="timeline-event timeline-right fade-in-right" data-index="2">
+          <div class="timeline-content">
+            <span class="timeline-time">19:00 hs</span>
+            <span class="timeline-title">Recepción 📸</span>
+          </div>
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+        </div>
 
+        <div class="timeline-event timeline-left fade-in-left" data-index="3">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">20:45 hs</span>
+            <span class="timeline-title">Ingreso al Salón 🚪</span>
+          </div>
+        </div>
+
+        <div class="timeline-event timeline-right fade-in-right" data-index="4">
+          <div class="timeline-content">
+            <span class="timeline-time">22:30</span>
+            <span class="timeline-title">Plato Principal 🍽️</span>
+          </div>
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+        </div>
+
+        <div class="timeline-event timeline-left fade-in-left" data-index="5">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-time">00:45 hs</span>
+            <span class="timeline-title">Brindis y mesa dulce 🍰</span>
+          </div>
+        </div>
+
+        <div class="timeline-event timeline-right fade-in-right" data-index="4">
+          <div class="timeline-content">
+            <span class="timeline-time">05:00 hs</span>
+            <span class="timeline-title">Fin de Fiesta 🎉</span>
+          </div>
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
     <section aria-labelledby="musica-title">
       <h2 id="musica-title">
         <i class="fas fa-music" aria-hidden="true"></i>
         Música
       </h2>
-      <p>¿Qué música no puede faltar?</p>
+      <p class="fecha-boda">¿Qué música no puede faltar?</strong></p>
+
       <div class="music-section">
-        <a href="https://open.spotify.com/playlist/6hEo3H1GaVymwYZYm72X1o?si=7d9ae97be02743b9&pt=a1f7e111c1d0a055507cf95637f83e80" target="_blank" rel="noopener" class="btn btn-spotify">
+        <a href="https://open.spotify.com/playlist/1qI4V616tg3Op30f88CaTM?si=s9enE_JuQZq6Ptv8EltmOg" target="_blank"
+          rel="noopener" class="btn btn-spotify">
           <i class="fab fa-spotify" aria-hidden="true"></i>
           Agregá a nuestra Playlist
         </a>
       </div>
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6hEo3H1GaVymwYZYm72X1o?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe data-testid="embed-iframe" style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/1qI4V616tg3Op30f88CaTM?utm_source=generator" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
 
     <section aria-labelledby="consejos-title">
@@ -236,8 +290,9 @@
           <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
           <div>
             <h4>Álbum compartido</h4>
-            <p>Subí tus fotos a nuestro álbum de Google Photos</p>
-            <a href="https://photos.app.goo.gl/TU_ALBUM_ID" target="_blank" class="btn btn-small">Subir fotos</a>
+            <p>Subí tus fotos del día a nuestro álbum de compartido</p>
+            <a href="https://drive.google.com/drive/folders/15vlFZ26TLz93oxRte3LZlIYpCiYbuFe0?usp=sharing"
+              target="_blank" class="btn btn-small">Subir fotos</a>
           </div>
         </div>
       </div>
@@ -248,13 +303,13 @@
         <i class="fas fa-clipboard-check" aria-hidden="true"></i>
         Confirmación de Asistencia
       </h2>
-      <p>¿Podés venir? ¡Contanos para organizar todo perfecto!</p>
       <div class="confirmation-buttons">
         <a href="https://forms.gle/TU_ENLACE_DE_GOOGLE_FORMS" target="_blank" rel="noopener" class="btn btn-primary">
           <i class="fas fa-check" aria-hidden="true"></i>
           Confirmar Asistencia
         </a>
-        <p class="form-note">Te llevará a un formulario de Google donde podrás confirmar tu asistencia y darnos todos los detalles.</p>
+        <p class="form-note">Te llevará a un formulario de Google donde podrás confirmar tu asistencia y darnos todos
+          los detalles.</p>
       </div>
     </section>
 
@@ -265,7 +320,7 @@
       </h2>
       <p>Tu presencia es el mejor regalo, pero si querés hacernos un mimo:</p>
       <div class="gift-options">
-        <a class="btn btn-primary" href="" target="_blank" rel="noopener">
+        <a class="btn btn-primary" href="" target="regaloModal" rel="noopener">
           <i class="fas fa-heart" aria-hidden="true"></i>
           Regalar con Amor
         </a>
@@ -285,17 +340,19 @@
       <div class="modal-body">
         <div class="instruction-step">
           <h4>Paso 1</h4>
-          <p>Si venís desde Campana por la ruta 193, vas a cruzar un primer cartel de señalización de Cruce. Seguí de largo.</p>
+          <p>Si venís desde Campana por la ruta 193, vas a cruzar un primer cartel de señalización de Cruce. Seguí de
+            largo.</p>
           <img src="assets/recomendacion_1.png" alt="Primera señalización en la ruta 193" loading="lazy">
         </div>
         <div class="instruction-step">
           <h4>Paso 2</h4>
-          <p>Pasando el segundo cartel de cruce, está la bajada para llegar a la finca.</p>
+          <p>Pasando el segundo cartel de cruce, está la bajada para llegar a la finca sobre mano derecha. Una vez que
+            bajas de la ruta, dobla a la izquierda y segui el camino</p>
           <img src="assets/recomendacion_2.png" alt="Segunda señalización y bajada a la finca" loading="lazy">
         </div>
         <div class="instruction-step">
           <h4>Paso 3</h4>
-          <p>A la misma altura de la bajada, sobre el lado izquierdo, está el cartel del Cartódromo de Zárate como referencia.</p>
+          <p>A la misma altura de la bajada, sobre el lado izquierdo, está el cartel del Cartódromo de Zárate .</p>
           <img src="assets/recomendacion_3.png" alt="Cartel del Cartódromo de Zárate como referencia" loading="lazy">
         </div>
       </div>
@@ -317,11 +374,11 @@
             <i class="fas fa-car" aria-hidden="true"></i>
             <div>
               <h4>Remis/Taxi</h4>
-              <p>La opción más cómoda para ir y volver sin preocupaciones</p>
+              <p>Los remises de campana no llegan al lugar salvo reservación previa</p>
+              <p>Empresas que realizan los viajes:</p>
               <ul>
-                <li>No te preocupes por manejar</li>
-                <li>Podés tomar tranquilo</li>
-                <li>Viaje seguro de vuelta</li>
+                <li>Taxi sol: </li>
+                <li> Taxi ..</li>
               </ul>
             </div>
           </div>
@@ -329,22 +386,68 @@
             <i class="fas fa-users" aria-hidden="true"></i>
             <div>
               <h4>Combi compartida</h4>
-              <p>Organizate con otros invitados para compartir el viaje</p>
               <ul>
-                <li>Más económico</li>
-                <li>Divertido ir con amigos</li>
-                <li>Coordinamos horarios</li>
+                <li>Si queres venir en combi, no olvides mencionarlo en el formulario de asistencia</li>
+                <li>Cerca de la fecha, nos vamos a contactar por whatsapp para coordinar.</li>
               </ul>
             </div>
           </div>
           <div class="transport-warning">
             <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
-            <p><strong>Importante:</strong> Si venís en auto, recordá designar un conductor responsable. ¡Queremos que llegues seguro a casa!</p>
+            <p><strong>Importante:</strong> Si venís en auto, recordá designar un conductor responsable. ¡Queremos que
+              llegues seguro a casa!</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
+  <div id="regaloModal" class="modal" role="dialog" aria-labelledby="regalo-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="regalo-title">Regalo</h3>
+        <button class="cerrar" onclick="cerrarModal('regalo')" aria-label="Cerrar regalo" type="button">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="transport-options">
+          <div class="transport-option">
+            <i class="fas fa-car" aria-hidden="true"></i>
+            <div>
+              <h4>Cuenta en Pesos</h4>
+              <ul>
+                <li>Banco: Santander </li>
+                <li> Titular: Guillermina Martino</li>
+                <li> Cuil: Santander</li>
+                <li> Alias:</li>
+                <li> CBU:</li>
+              </ul>
+            </div>
+          </div>
+          <div class="transport-option">
+            <i class="fas fa-users" aria-hidden="true"></i>
+            <div>
+              <h4>Cuenta en Dolares</h4>
+              <ul>
+                <li>Banco: Santander </li>
+                <li> Titular: Guillermina Martino</li>
+                <li> Cuil: Santander</li>
+                <li> Alias:</li>
+                <li> CBU:</li>
+              </ul>
+            </div>
+          </div>
+          <div class="transport-warning">
+            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+            <p><strong>Importante:</strong> Tambien podes hacerlo presencialmente el dia de la fiesta!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div id="alojamientoModal" class="modal" role="dialog" aria-labelledby="alojamiento-title" aria-hidden="true">
     <div class="modal-content">
@@ -357,37 +460,72 @@
       <div class="modal-body">
         <div class="accommodation-options">
           <div class="accommodation-item">
-            <h4>Hotel Campana</h4>
+            <h4>Wyndham Garden Campana</h4>
             <div class="hotel-info">
-              <p><i class="fas fa-map-marker-alt"></i> A 15 minutos de la finca</p>
-              <p><i class="fas fa-star"></i> 4 estrellas</p>
-              <p><i class="fas fa-phone"></i> (03489) 123-456</p>
+              <p><i class="fas fa-map-marker-alt"></i> A 10 minutos de la finca</p>
+              <p><i class="fas fa-star"></i> Recomendado si vas a movilizarte por tu cuenta!</p>
+              <p><a
+                  href="https://wyndhamgardencampana.com/?gad_source=1&gad_campaignid=20906054538&gbraid=0AAAAAqs8cmen4LZzYYFG2QVbs8Bg9qUn8&gclid=CjwKCAiA3fnJBhAgEiwAyqmY5cOrSjm4YxkeG0ST4vL7nMnSRpcTh0xEE2N8eyn7_qZQt7RDzCNvNBoCplkQAvD_BwE"></i>
+                  Link</a></p>
             </div>
           </div>
-          <div class="accommodation-item">
-            <h4>Apart Hotel Zárate</h4>
-            <div class="hotel-info">
-              <p><i class="fas fa-map-marker-alt"></i> A 20 minutos de la finca</p>
-              <p><i class="fas fa-star"></i> 3 estrellas</p>
-              <p><i class="fas fa-phone"></i> (03487) 654-321</p>
-            </div>
+        </div>
+        <div class="accommodation-item">
+          <h4>Hotel Plaza Campana</h4>
+          <div class="hotel-info">
+            <p><i class="fas fa-map-marker-alt"></i> A una cuadra de la municipalidad de campana</p>
+            <p><i class="fas fa-star"></i> Recomendado si vas en combi/taxi</p>
+            <p><a href="https://maps.app.goo.gl/whwWKNKNKnW4GCMm9">Link</a></p>
           </div>
-          <div class="accommodation-item">
-            <h4>Cabañas del Río</h4>
-            <div class="hotel-info">
-              <p><i class="fas fa-map-marker-alt"></i> A 25 minutos de la finca</p>
-              <p><i class="fas fa-tree"></i> Ambiente natural</p>
-              <p><i class="fas fa-phone"></i> (03489) 987-654</p>
-            </div>
+        </div>
+        <div class="accommodation-item">
+          <h4>Plaza Suites Campana</h4>
+          <div class="hotel-info">
+            <p><i class="fas fa-map-marker-alt"></i> Frente a la municipalidad de campana</p>
+            <p><i class="fas fa-tree"></i> Recomendado si vas en combi/taxi</p>
+            <p><a href="https://www.booking.com/Share-I5xCMC">Link</a></p>
           </div>
-          <div class="accommodation-tip">
-            <i class="fas fa-lightbulb"></i>
-            <p><strong>Tip:</strong> Reservá con anticipación, especialmente si venís en fin de semana. ¡Podés coordinar con otros invitados para compartir!</p>
+        </div>
+        <div class="accommodation-item">
+          <h4>Rental Suites Campana</h4>
+          <div class="hotel-info">
+            <p><i class="fas fa-map-marker-alt"></i> A 4 cuadras de la municipalidad de campana</p>
+            <p><i class="fas fa-tree"></i> Recomendado si vas en combi/taxi</p>
+            <p><a href="https://maps.app.goo.gl/MQLxBRJgvuZKeH2g9">Link</a></p>
           </div>
+        </div>
+        <div class="accommodation-tip">
+          <i class="fas fa-lightbulb"></i>
+          <p><strong>Tip:</strong> Si te quedan dudas o preferis alquilar un departamento por Airbnb avisanos y te
+            ayudamos!</p>
         </div>
       </div>
     </div>
   </div>
+  </div>
+
+
+
+  <div id="giftsModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Luna de Miel</h3>
+        <button class="modal-close" onclick="closeModal('gifts')">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Agradeceríamos cualquier contribución, que nos permitirá crear recuerdos inolvidables en nuestro viaje
+          juntos.</p>
+        <div class="gift-info">
+          <h4>CUENTA</h4>
+          <p><strong>ALIAS:</strong> GuilleGero2026</p>
+          <p>¡Gracias de corazón por su amor y apoyo!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <footer>
     <div class="footer-content">
@@ -399,4 +537,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

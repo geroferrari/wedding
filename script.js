@@ -77,10 +77,6 @@ class WeddingSiteManager {
           <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-oscuro);">${minutes}</div>
           <div style="font-size: 0.7rem; opacity: 0.7;">min</div>
         </div>
-        <div style="background: rgba(74, 74, 74, 0.1); padding: 0.5rem 1rem; border-radius: 8px; text-align: center; min-width: 60px;">
-          <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-oscuro);">${seconds}</div>
-          <div style="font-size: 0.7rem; opacity: 0.7;">seg</div>
-        </div>
       </div>
     `
   }
