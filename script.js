@@ -710,3 +710,36 @@ if ("performance" in window) {
     console.log(`Page load time: ${perfData.loadEventEnd - perfData.loadEventStart}ms`)
   })
 }
+
+// Gift modal
+const giftModal = document.getElementById("gift-modal");
+const openGiftBtn = document.getElementById("open-gift-modal");
+const closeGiftBtn = document.getElementById("close-gift-modal");
+
+openGiftBtn.addEventListener("click", () => {
+  giftModal.style.display = "block";
+});
+
+closeGiftBtn.addEventListener("click", () => {
+  giftModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === giftModal) {
+    giftModal.style.display = "none";
+  }
+});
+
+// Copy alias
+document.querySelectorAll(".copy-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const text = btn.dataset.copy;
+    navigator.clipboard.writeText(text);
+
+    const original = btn.textContent;
+    btn.textContent = "¡Copiado!";
+    setTimeout(() => {
+      btn.textContent = original;
+    }, 1500);
+  });
+});

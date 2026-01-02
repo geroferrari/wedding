@@ -282,7 +282,7 @@
           <i class="fab fa-instagram" aria-hidden="true"></i>
           <div>
             <h4>Instagram</h4>
-            <p>Etiquetanos en tus stories y posts</p>
+            <p class="gift-note">Etiquetanos en tus stories y posts</p>
             <strong>@guille_gero_2026</strong>
           </div>
         </div>
@@ -290,7 +290,7 @@
           <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
           <div>
             <h4>Álbum compartido</h4>
-            <p>Subí tus fotos del día a nuestro álbum de compartido</p>
+            <p class="gift-note">Subí tus fotos del día a nuestro álbum de compartido</p>
             <a href="https://drive.google.com/drive/folders/15vlFZ26TLz93oxRte3LZlIYpCiYbuFe0?usp=sharing"
               target="_blank" class="btn btn-small">Subir fotos</a>
           </div>
@@ -303,13 +303,14 @@
         <i class="fas fa-clipboard-check" aria-hidden="true"></i>
         Confirmación de Asistencia
       </h2>
+      <p class="fecha-boda">El botón te llevará a un formulario de Google donde podrás confirmar tu asistencia y darnos
+        todos
+        los detalles.</p>
       <div class="confirmation-buttons">
-        <a href="https://forms.gle/TU_ENLACE_DE_GOOGLE_FORMS" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="https://forms.gle/EtwTJYnyxe8J8TZy5" target="_blank" rel="noopener" class="btn btn-primary">
           <i class="fas fa-check" aria-hidden="true"></i>
           Confirmar Asistencia
         </a>
-        <p class="form-note">Te llevará a un formulario de Google donde podrás confirmar tu asistencia y darnos todos
-          los detalles.</p>
       </div>
     </section>
 
@@ -318,13 +319,16 @@
         <i class="fas fa-gift" aria-hidden="true"></i>
         Regalos
       </h2>
-      <p>Tu presencia es el mejor regalo, pero si querés hacernos un mimo:</p>
+      <p class="fecha-boda"> Gracias por ser parte de este día! si queres hacernos un regalo, podés hacerlo desde acá.
+      </p>
       <div class="gift-options">
-        <a class="btn btn-primary" href="" target="regaloModal" rel="noopener">
-          <i class="fas fa-heart" aria-hidden="true"></i>
-          Regalar con Amor
-        </a>
+        <button class="btn btn-primary" href="" id="open-gift-modal" rel="noopener">
+          <i aria-hidden="true"></i>
+          Datos Bancarios
+        </button>
       </div>
+      <p class="fecha-boda"> También podes hacerlo presencialmente el dia de la fiesta!
+      </p>
     </section>
   </main>
 
@@ -403,51 +407,96 @@
   </div>
 
 
-  <div id="regaloModal" class="modal" role="dialog" aria-labelledby="regalo-title" aria-hidden="true">
+  <div id="gift-modal" class="modal">
     <div class="modal-content">
+
       <div class="modal-header">
-        <h3 id="regalo-title">Regalo</h3>
-        <button class="cerrar" onclick="cerrarModal('regalo')" aria-label="Cerrar regalo" type="button">
-          <i class="fas fa-times" aria-hidden="true"></i>
-        </button>
+        <h3>Datos para regalo</h3>
+        <button class="cerrar" id="close-gift-modal">&times;</button>
       </div>
+
       <div class="modal-body">
-        <div class="transport-options">
-          <div class="transport-option">
-            <i class="fas fa-car" aria-hidden="true"></i>
-            <div>
-              <h4>Cuenta en Pesos</h4>
-              <ul>
-                <li>Banco: Santander </li>
-                <li> Titular: Guillermina Martino</li>
-                <li> Cuil: Santander</li>
-                <li> Alias:</li>
-                <li> CBU:</li>
-              </ul>
-            </div>
+
+        <!-- PESOS -->
+        <div class="gift-block">
+          <h4>Cuenta en Pesos</h4>
+
+          <div class="gift-row">
+            <span>Banco</span>
+            <span class="gift-muted">Santander</span>
           </div>
-          <div class="transport-option">
-            <i class="fas fa-users" aria-hidden="true"></i>
-            <div>
-              <h4>Cuenta en Dolares</h4>
-              <ul>
-                <li>Banco: Santander </li>
-                <li> Titular: Guillermina Martino</li>
-                <li> Cuil: Santander</li>
-                <li> Alias:</li>
-                <li> CBU:</li>
-              </ul>
-            </div>
+
+          <div class="gift-row">
+            <span>Titular</span>
+            <span class="gift-muted">Guillermina Martino</span>
           </div>
-          <div class="transport-warning">
-            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
-            <p><strong>Importante:</strong> Tambien podes hacerlo presencialmente el dia de la fiesta!</p>
+
+          <div class="gift-row">
+            <span>CUIT</span>
+            <span class="gift-muted">27-38427403-5</span>
+          </div>
+
+          <div class="gift-row">
+            <span>Alias</span>
+            <button class="copy-btn" data-copy="gui.martino.">
+              gui.martino.
+            </button>
+          </div>
+
+          <div class="gift-row">
+            <span>CBU</span>
+            <span class="gift-muted">0720075588000003458336</span>
+          </div>
+          <div class="gift-row">
+            <span>Concepto de Transferencia</span>
+            <span class="gift-muted">"regalo casamiento"</span>
           </div>
         </div>
+
+        <!-- DÓLARES -->
+        <div class="gift-block">
+          <h4>Cuenta en Dolares</h4>
+
+          <div class="gift-row">
+            <span>Banco</span>
+            <span class="gift-muted">Santander</span>
+          </div>
+
+          <div class="gift-row">
+            <span>Titular</span>
+            <span class="gift-muted">Gerónimo Ferrari</span>
+          </div>
+
+          <div class="gift-row">
+            <span>CUIT</span>
+            <span class="gift-muted">20-40235035-1</span>
+          </div>
+
+          <div class="gift-row">
+            <span>Alias</span>
+            <button class="copy-btn" data-copy="GERO.FERRARI.36">
+              GERO.FERRARI.36
+            </button>
+          </div>
+
+          <div class="gift-row">
+            <span>CBU</span>
+            <span class="gift-muted">0720075588000038669772</span>
+          </div>
+          <div class="gift-row">
+            <span>Concepto de Transferencia</span>
+            <span class="gift-muted">"regalo casamiento"</span>
+          </div>
+        </div>
+
+
+        <p class="gift-note">
+          ¡Muchas gracias! 💕
+        </p>
+
       </div>
     </div>
   </div>
-
 
   <div id="alojamientoModal" class="modal" role="dialog" aria-labelledby="alojamiento-title" aria-hidden="true">
     <div class="modal-content">
@@ -505,31 +554,9 @@
   </div>
 
 
-
-  <div id="giftsModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>Luna de Miel</h3>
-        <button class="modal-close" onclick="closeModal('gifts')">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Agradeceríamos cualquier contribución, que nos permitirá crear recuerdos inolvidables en nuestro viaje
-          juntos.</p>
-        <div class="gift-info">
-          <h4>CUENTA</h4>
-          <p><strong>ALIAS:</strong> GuilleGero2026</p>
-          <p>¡Gracias de corazón por su amor y apoyo!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   <footer>
     <div class="footer-content">
-      <p>Con mucho amor,</p>
+      <p>Con mucho amor</p>
       <p class="names">Guille & Gero</p>
       <p class="date">28 de Marzo de 2026</p>
     </div>
