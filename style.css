@@ -439,6 +439,61 @@ h2 i {
   margin-top: 2rem;
 }
 
+#comparti-fotos-section {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+#comparti-fotos-section h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* CONTENEDOR DE LAS CARDS */
+.comparti-fotos-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* CADA CARD */
+.comparti-fotos-card {
+  max-width: 320px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: var(--color-principal);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.comparti-fotos-text {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .comparti-fotos-wrapper {
+    gap: 1.5rem;
+  }
+
+  .comparti-fotos-card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .comparti-fotos-card .btn {
+    width: 100%;
+  }
+}
+
 .tip-card {
   display: flex;
   align-items: center;
@@ -1186,7 +1241,7 @@ footer {
     right: 10px;
   }
 
-  .tips-grid {
+  .photo-sharing {
     grid-template-columns: 1fr;
   }
 
