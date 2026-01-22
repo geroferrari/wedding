@@ -800,11 +800,13 @@ textarea:focus {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  height: 100%;
+  height: 85%;
   width: 2px;
   background: #d4b8aa;
   z-index: 1;
 }
+
+
 
 .timeline-event {
   display: flex;
