@@ -90,27 +90,39 @@ body {
 
 /* Header */
 header {
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--color-principal) 45%, transparent),
-      color-mix(in srgb, var(--color-principal) 45%, transparent)),
-    url("assets/ppal.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: grayscale(100%);
-  padding: 4rem 1rem;
-  color: var(--color-blanco);
   position: relative;
   text-align: center;
+  color: var(--color-blanco);
   min-height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 15vh;
+  padding: 4rem 1rem 15vh;
+  overflow: hidden;
+}
+
+/* Fondo con imagen + filtro (Safari safe) */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-principal) 35%, transparent),
+      color-mix(in srgb, var(--color-principal) 35%, transparent)),
+    url("assets/ppal.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: var(--color-principal);
+  filter: grayscale(100%);
+  z-index: 0;
 }
 
 
+/* Contenido por encima del fondo */
 .header-overlay {
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding: 2rem;
 }
@@ -120,9 +132,8 @@ header {
   max-width: 1020px;
   width: 100%;
   height: auto;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 8rem auto;
   display: block;
-  filter: brightness(20) contrast(10);
 }
 
 header h1 {
@@ -900,6 +911,10 @@ textarea:focus {
 
 /* Mobile Timeline */
 @media (max-width: 768px) {
+
+  header::before {
+    background-size: cover;
+  }
 
   .timeline-container {
     padding-left: 1.5rem;
