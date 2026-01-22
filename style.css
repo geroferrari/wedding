@@ -109,7 +109,7 @@ header::before {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-principal) 35%, transparent),
       color-mix(in srgb, var(--color-principal) 35%, transparent)),
-    url("assets/ppal.jpeg");
+    url("assets/ppal.png");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
